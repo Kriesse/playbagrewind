@@ -102,3 +102,38 @@ a:focus {
   color: #CB3900;
   text-decoration: underline;
 }
+
+/* Music Hackday ribbon */
+#mhd {
+  left: -65px;
+  height: 40px;
+  top: 40px;
+  position: absolute;
+  width: 250px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  background: black;
+  -webkit-box-shadow(rgba(black, 0.2) 1px 1px 10px);
+  -moz-box-shadow(rgba(black, 0.2) 1px 1px 10px);
+  box-shadow(rgba(black, 0.2) 1px 1px 10px);
+}
+
+#mhd a {
+  color: white;
+  font-family:Helvetica,Arial;
+  font-size: 11px;
+  line-height: 1.5em;
+  left: 0;
+  padding: 5px 10px 0px 60px;
+  position: absolute;
+  text-align: center;
+  width: 150px;
+  text-decoration: none;
+  display: block
+}
+
+#mhd a span {
+  padding-left: 25px;
+  width: 100px !important;
+  display: block;
+}
