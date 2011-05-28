@@ -155,8 +155,7 @@
 
   var map;
   var berlin = new google.maps.LatLng(52.499282,13.457329);
-  var etsy = new google.maps.LatLng(52.501688, 13.411488);
-  var MHDB002 = new google.maps.LatLng(52.50209,13.450313);
+  var MHDB002 = new google.maps.LatLng(52.50030707424932,13.452984094619751);
 
   var MY_MAPTYPE_ID = 'MHDB11';
 
@@ -201,9 +200,9 @@
     var jayzMapType = new google.maps.StyledMapType(style, styledMapOptions);
 
     // LOCATIONS //
-    var etsyMarker = new google.maps.Marker({ position: etsy, map: map, title:"Etsy Labs" });
-    var etsyInfowindow = new google.maps.InfoWindow({
-        content:"Etsy Labs<br>RitterstraÃŸe 12 â€“ 14<br>10969 Berlin, Germany"
+    var MHDB002Marker = new google.maps.Marker({ position: MHDB002, map: map, title:"We know what works" });
+    var MHDB002Infowindow = new google.maps.InfoWindow({
+        content:"This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now."
     });
 
     map.mapTypes.set(MY_MAPTYPE_ID, jayzMapType);
