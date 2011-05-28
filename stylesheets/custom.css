@@ -9,6 +9,7 @@ table, th, td {vertical-align:middle;}
 blockquote:before, blockquote:after, q:before, q:after {content:'';}
 blockquote, q {quotes:"" "";}
 a img {border:none;}
+a.anchor{visibility: hidden}
 :focus {outline:0;}
 
 
@@ -28,11 +29,12 @@ h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
 p {margin:0 0 1.5em;}
 
 .container {
-  max-width: 960px;
+  max-width: 940px;
   width: auto !important;
-  width: 960px;
+  width: 940px;
   margin: 0 auto;
   overflow: hidden;
+  padding: 0 20px;
 }
 
 .inline_list {
@@ -44,7 +46,6 @@ p {margin:0 0 1.5em;}
 
 .inline_list li {
   float: left;
-  margin-right: 2.439%;
   list-style: none;
 }
 
@@ -52,39 +53,53 @@ p {margin:0 0 1.5em;}
   color: #979797;
 }
 
-.li_icon {
+.inline_list em {
+  display: block;
   width: 6em;
+  height: 6em;
+  margin: 0 auto 3em auto;
   background: #000;
   color: #FFF;
   text-align: center;
+  text-indent: -9999px;
   -moz-border-radius: 3em;
   -webkit-border-radius: 3em;
   border-radius: 3em;
 }
 
+.item_list li {
+  width: 220px;
+  margin-right: 20px;
+}
 
+.item_list li.last {
+  margin-right: 0;
+}
 
 /* layout */
 header {
+  padding-top: 4em;
   text-align: center;
 }
 
 section {
   margin: 0;
-  padding: 1.5em 0;
+  padding: 4.5em 0;
   overflow: hidden;
 }
 
 h1 {
-  font-size: 90px;
+  font-size: 72px;
+  text-transform: uppercase;
 }
 
 h1 strong {
-  font-size: 36px;
+  font-size: 24px;
   font-family: Georgia, Times, serif;
   font-style: italic;
   font-weight: normal;
   display: block;
+  text-transform: normal;
 }
 
 /* links */
