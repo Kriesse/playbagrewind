@@ -1,7 +1,7 @@
 /* reset.css */
 html {margin:0;padding:0;border:0;}
-body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
-article, aside, details, figcaption, figure, dialog, footer, header, hgroup, menu, nav, section {display:block;}
+html,body,body div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure, dialog, footer, header, hgroup, menu, nav, section {display:block;width:100%;}
 body {line-height:1.5;background:white;}
 table {border-collapse:separate;border-spacing:0;}
 caption, th, td {text-align:left;font-weight:normal;float:none !important;}
@@ -9,14 +9,18 @@ table, th, td {vertical-align:middle;}
 blockquote:before, blockquote:after, q:before, q:after {content:'';}
 blockquote, q {quotes:"" "";}
 a img {border:none;}
+a.anchor{visibility: hidden}
 :focus {outline:0;}
+
+
+{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;}
 
 /* typography.css */
 html {font-size:100.01%;}
-body {font-size:75%;color:#000;background:#fff;font-family:"Proxima Nova", "Helvetica Neue", Arial, Helvetica, sans-serif;}
+body {background: #FFF url(../img/bg.png) repeat 0 0;font-size:75%;color:#000;font-family:"Proxima Nova", "Helvetica Neue", Arial, Helvetica, sans-serif;}
 h1, h2, h3, h4, h5, h6 {font-weight:bold;color:#000;}
-h1 {font-size:3em;line-height:1;margin-bottom:0.5em;}
-h2 {font-size:2em;margin-bottom:0.75em;}
+h1 {font-size:7em;line-height:1;margin-bottom:0.5em;}
+h2 {font-size:3em;margin-bottom:0.75em; text-align: center;}
 h3 {font-size:1.5em;line-height:1;margin-bottom:1em;}
 h4 {font-size:1.2em;line-height:1.25;margin-bottom:1.25em;}
 h5 {font-size:1em;font-weight:bold;margin-bottom:1.5em;}
@@ -24,13 +28,13 @@ h6 {font-size:1em;font-weight:bold;}
 h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
 p {margin:0 0 1.5em;}
 
-
 .container {
-  max-width: 960px;
+  max-width: 940px;
   width: auto !important;
-  width: 960px;
+  width: 940px;
   margin: 0 auto;
   overflow: hidden;
+  padding: 0 20px;
 }
 
 .inline_list {
@@ -42,8 +46,34 @@ p {margin:0 0 1.5em;}
 
 .inline_list li {
   float: left;
-  margin-right: 2.439%;  
+  margin-right: 2.439%;
   list-style: none;
+}
+
+.inline_list ul li {
+  color: #979797;
+}
+
+.inline_list em {
+  display: block;
+  width: 6em;
+  height: 6em;
+  background: #000;
+  color: #FFF;
+  text-align: center;
+  text-indent: -9999px;
+  -moz-border-radius: 3em;
+  -webkit-border-radius: 3em;
+  border-radius: 3em;
+}
+
+.item_list li {
+  width: 220px;
+  margin-left: 20px;
+}
+
+.item_list li.last {
+  margin-left: 0;
 }
 
 /* layout */
@@ -55,6 +85,18 @@ section {
   margin: 0;
   padding: 1.5em 0;
   overflow: hidden;
+}
+
+h1 {
+  font-size: 90px;
+}
+
+h1 strong {
+  font-size: 36px;
+  font-family: Georgia, Times, serif;
+  font-style: italic;
+  font-weight: normal;
+  display: block;
 }
 
 /* links */
@@ -70,4 +112,39 @@ a:active,
 a:focus {
   color: #CB3900;
   text-decoration: underline;
+}
+
+/* Music Hackday ribbon */
+#mhd {
+  left: -65px;
+  height: 40px;
+  top: 40px;
+  position: absolute;
+  width: 250px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  background: black;
+  -webkit-box-shadow(rgba(black, 0.2) 1px 1px 10px);
+  -moz-box-shadow(rgba(black, 0.2) 1px 1px 10px);
+  box-shadow(rgba(black, 0.2) 1px 1px 10px);
+}
+
+#mhd a {
+  color: white;
+  font-family:Helvetica,Arial;
+  font-size: 11px;
+  line-height: 1.5em;
+  left: 0;
+  padding: 5px 10px 0px 60px;
+  position: absolute;
+  text-align: center;
+  width: 150px;
+  text-decoration: none;
+  display: block
+}
+
+#mhd a span {
+  padding-left: 25px;
+  width: 100px !important;
+  display: block;
 }
