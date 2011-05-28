@@ -46,7 +46,6 @@ p {margin:0 0 1.5em;}
 
 .inline_list li {
   float: left;
-  margin-right: 2.439%;
   list-style: none;
 }
 
@@ -69,11 +68,11 @@ p {margin:0 0 1.5em;}
 
 .item_list li {
   width: 220px;
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .item_list li.last {
-  margin-left: 0;
+  margin-right: 0;
 }
 
 /* layout */
