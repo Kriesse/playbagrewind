@@ -14,7 +14,11 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
   <body onload="initialize()">
-
+      <div id="mhd">
+  		<a href="http://berlin.musichackday.org/2011/">
+  		    <span>Music Hack Day</span>Berlin 2011
+  		</a>
+  	  </div>
     <header class="header">
       <div class="container">
         <h1>
@@ -39,7 +43,8 @@
 
     <section>
       <div class="container">
-        <h2><a name="about">What the fack is this?</a></h2>
+		<a class="anchor" name="about">about</a>
+        <h2>What the fack is this?</h2>
         <p>
           This project is about creating something out of your old music tapes – those dusty things in your basement you like too much to trash, but are not really listening to anymore? Right, these.
         </p>
@@ -153,8 +158,7 @@
 
   var map;
   var berlin = new google.maps.LatLng(52.499282,13.457329);
-  var etsy = new google.maps.LatLng(52.501688, 13.411488);
-  var MHDB002 = new google.maps.LatLng(52.50209,13.450313);
+  var MHDB002 = new google.maps.LatLng(52.50030707424932,13.452984094619751);
 
   var MY_MAPTYPE_ID = 'MHDB11';
 
@@ -195,13 +199,18 @@
     var styledMapOptions = {
       name: "MHDB11"
     };
+    
+    // custom marker
+    var blueIcon = new GIcon(G_DEFAULT_ICON);
+    blueIcon.image = "http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png";
+    markerOptions = { icon:blueIcon };
 
     var jayzMapType = new google.maps.StyledMapType(style, styledMapOptions);
 
     // LOCATIONS //
-    var etsyMarker = new google.maps.Marker({ position: etsy, map: map, title:"Etsy Labs" });
-    var etsyInfowindow = new google.maps.InfoWindow({
-        content:"Etsy Labs<br>RitterstraÃŸe 12 â€“ 14<br>10969 Berlin, Germany"
+    var MHDB002Marker = new google.maps.Marker({ position: MHDB002, map: map, title:"We know what works" });
+    var MHDB002Infowindow = new google.maps.InfoWindow({
+        content:"This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now."
     });
 
     map.mapTypes.set(MY_MAPTYPE_ID, jayzMapType);
