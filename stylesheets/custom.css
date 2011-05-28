@@ -29,11 +29,12 @@ h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
 p {margin:0 0 1.5em;}
 
 .container {
-  max-width: 960px;
+  max-width: 940px;
   width: auto !important;
-  width: 960px;
+  width: 940px;
   margin: 0 auto;
   overflow: hidden;
+  padding: 0 20px;
 }
 
 .inline_list {
@@ -66,7 +67,14 @@ p {margin:0 0 1.5em;}
   border-radius: 3em;
 }
 
+.item_list li {
+  width: 220px;
+  margin-left: 20px;
+}
 
+.item_list li.last {
+  margin-left: 0;
+}
 
 /* layout */
 header {
