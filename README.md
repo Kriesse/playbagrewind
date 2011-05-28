@@ -1,5 +1,5 @@
 
-Music HŠkelday
+Music Haekelday
 --------------
 
 This is the project for Music Hack Day 2011 by Claudine, Alex, Alex, Guido and Kriesse.
