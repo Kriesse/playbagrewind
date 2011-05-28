@@ -49,11 +49,28 @@ p {margin:0 0 1.5em;}
   list-style: none;
 }
 
+/* layout */
+header {
+  text-align: center;
+}
 
-/* section */ 
 section {
   margin: 0;
   padding: 1.5em 0;
   overflow: hidden;
 }
 
+/* links */
+a, 
+a:link, 
+a:visited {
+  color: #CB3900;
+  text-decoration: none;
+}
+
+a:hover, 
+a:active, 
+a:focus {
+  color: #CB3900;
+  text-decoration: underline;
+}
