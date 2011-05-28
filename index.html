@@ -14,13 +14,19 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
   <body onload="initialize()">
-
+      <div id="mhd">
+  		<a href="http://berlin.musichackday.org/2011/">
+  		    <span>Music Hack Day</span>Berlin 2011
+  		</a>
+  	  </div>
     <header class="header">
       <div class="container">
-        <h1>Music Haekel Day</h1>
-        <p>
-          Urban Crocheting vs. Music Hacking
-        </p>
+        <h1>
+          Music Haekel Day
+          <strong>
+            Urban Crocheting vs. Music Hacking
+          </strong>
+        </h1>
         <p>
           <a href="#about">What’s this all about?</a>
         </p>
@@ -37,7 +43,8 @@
 
     <section>
       <div class="container">
-        <h2><a name="about">What the fack is this?</a></h2>
+		<a class="anchors" name="about">about</a>
+        <h2>What the fack is this?</h2>
         <p>
           This project is about creating something out of your old music tapes – those dusty things in your basement you like too much to trash, but are not really listening to anymore? Right, these.
         </p>
@@ -80,7 +87,7 @@
           </li>
 
           <li>
-            <object height="219" width="219"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16096136&amp;auto_play=false&amp;player_type=artwork&amp;color=000000"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="300" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16096136&amp;auto_play=false&amp;player_type=artwork&amp;color=000000" type="application/x-shockwave-flash" width="300"></embed> </object>   
+            <object height="219" width="219"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16096136&amp;auto_play=false&amp;player_type=artwork&amp;color=000000"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="219" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16096136&amp;auto_play=false&amp;player_type=artwork&amp;color=000000" type="application/x-shockwave-flash" width="219"></embed> </object>   
             <ul>
               <li>created by:<a href="#">Espy</a></li>
               <li>located at:<a href="#">lala</a></li>
@@ -148,8 +155,7 @@
 
   var map;
   var berlin = new google.maps.LatLng(52.499282,13.457329);
-  var etsy = new google.maps.LatLng(52.501688, 13.411488);
-  var MHDB002 = new google.maps.LatLng(52.50209,13.450313);
+  var MHDB002 = new google.maps.LatLng(52.50030707424932,13.452984094619751);
 
   var MY_MAPTYPE_ID = 'MHDB11';
 
@@ -199,9 +205,9 @@
     var jayzMapType = new google.maps.StyledMapType(style, styledMapOptions);
 
     // LOCATIONS //
-    var etsyMarker = new google.maps.Marker({ position: etsy, map: map, title:"Etsy Labs" });
-    var etsyInfowindow = new google.maps.InfoWindow({
-        content:"Etsy Labs<br>RitterstraÃŸe 12 â€“ 14<br>10969 Berlin, Germany"
+    var MHDB002Marker = new google.maps.Marker({ position: MHDB002, map: map, title:"We know what works" });
+    var MHDB002Infowindow = new google.maps.InfoWindow({
+        content:"This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now."
     });
 
     map.mapTypes.set(MY_MAPTYPE_ID, jayzMapType);
