@@ -1,3 +1,4 @@
+
 Music HŠkelday
 --------------
 
@@ -8,6 +9,7 @@ This is the project for Music Hack Day 2011 by Claudine, Alex, Alex, Guido and K
 - Alex:     @alexthewilde
 - Alex:     @espylaub
 - Guido:    @guidoguido
+- Jeff:	  @jeffsimons
 
 
 [http://berlin.musichackday.org/2011/](http://berlin.musichackday.org/2011/)
