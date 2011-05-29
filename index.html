@@ -297,7 +297,7 @@
     var MHDB001Marker = new google.maps.Marker({ 
       position: MHDB001, 
       map: map, 
-      title:"Baroque CLip 01", 
+      title:"Baroque Clip 01", 
       draggable: false,
       raiseOnDrag: false,
       icon: image,
@@ -340,15 +340,27 @@
         content:'<span class="hidden meta">3</span><h4>Little Bit Closer</h4><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#" class="highlight-link">Listen to the tape</a>'
 
     });
+    
+    var lastOpenWindow;
+    
+    google.maps.event.addListener(MHDB001Marker, 'click', function() {
+      if(lastOpenWindow) lastOpenWindow.close();    
+      MHDB001Infowindow.open(map,MHDB001Marker);
+      lastOpenWindow = MHDB001Infowindow;
+    });
 
     google.maps.event.addListener(MHDB002Marker, 'click', function() {
+      if(lastOpenWindow) lastOpenWindow.close();  
       MHDB002Infowindow.open(map,MHDB002Marker);
+      lastOpenWindow = MHDB002Infowindow;
     });
     
     google.maps.event.addListener(MHDB003Marker, 'click', function() {
+      if(lastOpenWindow) lastOpenWindow.close();  
       MHDB003Infowindow.open(map,MHDB003Marker);
+      lastOpenWindow = MHDB003Infowindow;
     });
-
+    
   }
   </script>
   <!-- Piwik -->
