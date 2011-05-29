@@ -25,6 +25,11 @@ h6 {font-size:1em;font-weight:bold;}
 h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
 p {margin:0 0 1.5em;}
 
+p,
+h1 strong {
+  font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2", Georgia, Times, serif;
+}
+
 .container {
   max-width: 940px;
   width: auto !important;
@@ -63,47 +68,52 @@ p {margin:0 0 1.5em;}
 .small_list li {
   margin-right: 2ex;
   margin-bottom: .75em;
-  font-style:italic;
-  color:#979797;
+  font-style: italic;
+  color: #979797;
 }
 .small_list li a:before {
   content:" ";
-  display:block;
+  display: block;
   background: #CB3900;
-  height: 12px;
-  width: 12px;
-  -moz-border-radius:6px;
-  -webkit-border-radius:15px;
-  -o-border-radius:15px;
-  border-radius:15px;
-  position:absolute;
-  left:-1ex;
-  top:.25em;
+  height: .5em;
+  width: .5em;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -o-border-radius: 1em;
+  border-radius: 1em;
+  position: absolute;
+  left: 1ex;
+  top: .5em;
 }
 .small_list li a {
-  background: #979797;
-  border:1px solid #979797;
-  -moz-border-radius:6px;
-  -webkit-border-radius:6px;
-  -o-border-radius:6px;
-  border-radius:6px;
-  padding:0 1ex;	
-  position:relative;
-  color:#fff;
-  text-decoration:none;
-  font-style:normal;
-  display:block;
-  -webkit-transition:background border-color 1.0s ease-in-out;
-	-moz-transition:background border-color 1.0s ease-in-out;
-	-o-transition:background border-color 1.0s ease-in-out;
-	-ms-transition:background border-color 1.0s ease-in-out;	
-	-transition:background border-color 1.0s ease-in-out;
+  background: #C8C3C1;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -o-border-radius: 1em;
+  border-radius: 1em;
+  padding: 0 1ex 0 3ex;
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  font-style: normal;
+  display: block;
+  -webkit-transition:background background-color 1.0s ease-in-out;
+  -moz-transition:background background-color 1.0s ease-in-out;
+  -o-transition:background background-color 1.0s ease-in-out;
+  -ms-transition:background background-color 1.0s ease-in-out;	
+  -transition:background background-color 1.0s ease-in-out;
 }
-.small_list li a:hover {
-  background: #CB3900;
-  border-color:#CB3900;
+.small_list li a:hover,
+.small_list li a:active,
+.small_list li a:focus {
+  background-color: #CB3900;
 }
 
+.small_list li a:hover:before,
+.small_list li a:active:before,
+.small_list li a:focus:before {
+  background: #FFF;
+}
 
 .span-6,
 .item_list li,
@@ -175,9 +185,34 @@ section {
   overflow: hidden;
 }
 
-#gallery {
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+.separator {
+  border: transparent;
+  height: 2em;
+  text-align: center;
+  height: 1px;
+  background: #000;
+}
+
+.separator span {
+  position: relative;
+  top: -1em;
+  width: 3em;
+  height: 3em;
+  display: inline-block;
+  text-indent: -9999px;
+  background: transparent url(../img/mhd_icons.png) no-repeat 50% -11.5em;
+}
+
+.separator.tape span {
+  background-position: 50% -11.5em;
+}
+
+.separator.heart span {
+  background-position: 50% -23.4em;
+}
+
+.separator.yay span {
+  background-position: 50% -20.4em;
 }
 
 h1 {
@@ -187,7 +222,6 @@ h1 {
 
 h1 strong {
   font-size: 24px;
-  font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2", Georgia, Times, serif;
   font-style: italic;
   font-weight: normal;
   display: block;
