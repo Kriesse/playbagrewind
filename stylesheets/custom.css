@@ -9,7 +9,7 @@ table, th, td {vertical-align:middle;}
 blockquote:before, blockquote:after, q:before, q:after {content:'';}
 blockquote, q {quotes:"" "";}
 a img {border:none;}
-a.anchor{visibility: hidden; display: none;}
+a.anchor{visibility: hidden;}
 :focus {outline:0;}
 
 /* typography.css */
@@ -302,6 +302,11 @@ li.last,
 
 /* map active visual cue */
 
+.map_wrapper {
+  padding: 6px 0;
+  background: transparent url(../img/mhd_pttrn.png) repeat 0 0;
+}
+
 .map.container {
   padding: 4px;
   -webkit-transition: border 1.0s ease-in-out;
@@ -352,9 +357,6 @@ li.last,
   position:relative;
   overflow:visible;
 }
-
-
-
 .tapeHighlight{
   border: 5px solid red;
 }
