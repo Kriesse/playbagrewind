@@ -9,11 +9,8 @@ table, th, td {vertical-align:middle;}
 blockquote:before, blockquote:after, q:before, q:after {content:'';}
 blockquote, q {quotes:"" "";}
 a img {border:none;}
-a.anchor{visibility: hidden}
+a.anchor{visibility: hidden; display: none;}
 :focus {outline:0;}
-
-
-{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;}
 
 /* typography.css */
 html {font-size:100.01%;}
@@ -64,8 +61,49 @@ p {margin:0 0 1.5em;}
 }
 
 .small_list li {
-  margin-right: 1em;
+  margin-right: 2ex;
+  margin-bottom: .75em;
+  font-style:italic;
+  color:#979797;
 }
+.small_list li a:before {
+  content:" ";
+  display:block;
+  background: #CB3900;
+  height: 12px;
+  width: 12px;
+  -moz-border-radius:6px;
+  -webkit-border-radius:15px;
+  -o-border-radius:15px;
+  border-radius:15px;
+  position:absolute;
+  left:-1ex;
+  top:.25em;
+}
+.small_list li a {
+  background: #979797;
+  border:1px solid #979797;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  -o-border-radius:6px;
+  border-radius:6px;
+  padding:0 1ex;	
+  position:relative;
+  color:#fff;
+  text-decoration:none;
+  font-style:normal;
+  display:block;
+  -webkit-transition:background border-color 1.0s ease-in-out;
+	-moz-transition:background border-color 1.0s ease-in-out;
+	-o-transition:background border-color 1.0s ease-in-out;
+	-ms-transition:background border-color 1.0s ease-in-out;	
+	-transition:background border-color 1.0s ease-in-out;
+}
+.small_list li a:hover {
+  background: #CB3900;
+  border-color:#CB3900;
+}
+
 
 .span-6,
 .item_list li,
@@ -75,8 +113,34 @@ p {margin:0 0 1.5em;}
   float: left;
 }
 
+
+/* step_list */
 .step_list li {
   width: 300px;
+}
+
+.step_list em {
+  display: block;
+  width: 5em;
+  height: 5em;
+  margin: 0 auto 3em auto;
+  background: #000 url(../img/mhd_icons.png) no-repeat 50% 2.2em;
+  color: #FFF;
+  text-align: center;
+  text-indent: -9999px;
+  -moz-border-radius: 3em;
+  -webkit-border-radius: 3em;
+  border-radius: 3em;
+}
+
+.step_list .step_01 em {
+  background-position: 50% 1.8em;
+}
+.step_list .step_02 em {
+  background-position: 50% -2.4em;
+}
+.step_list .step_03 em {
+  background-position: 50% -6em;
 }
 
 .item_list li {
@@ -87,7 +151,8 @@ p {margin:0 0 1.5em;}
 .item_list ul {
   overflow: hidden;
   border-bottom: 1px solid #979797;
-  margin-bottom: 1.5em;
+  margin-bottom: 3em;
+  font-size: 0.75em;
 }
 
 .item_list ul li {
@@ -106,8 +171,13 @@ header {
 
 section {
   margin: 0;
-  padding: 4.5em 0;
+  padding: 3em 0;
   overflow: hidden;
+}
+
+#gallery {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 
 h1 {
@@ -178,11 +248,15 @@ li.last,
   text-align: center;
   width: 150px;
   text-decoration: none;
-  display: block
+  display: block;
 }
 
 #mhd a span {
   padding-left: 25px;
   width: 100px !important;
   display: block;
+}
+
+#map_canvas {
+
 }
