@@ -259,7 +259,7 @@ li.last,
 }
 
 #footer {
-  background: #000;
+  background: transparent url(../img/mhd_footer.png) repeat-x 50% 100%;
   color: #FFF;
   padding: 1.5em 0;
   text-align: center;
