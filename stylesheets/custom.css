@@ -187,7 +187,6 @@ h1 strong {
 header {
   padding-top: 4em;
   text-align: center;
-  background: url(../img/line.png) repeat-x 0px 7.3em;
 }
 
 section {
@@ -200,12 +199,20 @@ header .container{
   background: url(../img/header.png) no-repeat 20px 0px;
 }
 
+
 .separator {
   border: transparent;
   height: 2em;
   text-align: center;
   height: 1px;
   background: #000;
+}
+
+header .separator{
+  position: absolute;
+  width: 100%;
+  top: 117px;
+  z-index: -10;
 }
 
 .separator span {
@@ -228,6 +235,22 @@ header .container{
 
 .separator.yay span {
   background-position: 50% -20.4em;
+}
+
+.separator.play span.back {
+  background-position: 50% -26.7em;
+  left: -530px;
+  width: 1em;
+  height: 1em;
+  top: -0.5em;
+}
+
+.separator.play span.fwd {
+  background-position: 50% -25.4em;
+  left: 530px;
+  width: 1em;
+  height: 1em;
+  top: -0.5em;
 }
 
 h1 {
