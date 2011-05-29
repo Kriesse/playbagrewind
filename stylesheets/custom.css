@@ -121,7 +121,7 @@ h1 strong {
   font-style: italic;
   font-weight: normal;
   display: block;
-  text-transform: normal;
+  text-transform: none;
 }
 
 
