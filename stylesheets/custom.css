@@ -17,7 +17,7 @@ a.anchor{visibility: hidden}
 
 /* typography.css */
 html {font-size:100.01%;}
-body {background: #FFF url(../img/bg.png) repeat 0 0;font-size:75%;color:#000;font-family:"Proxima Nova", "Helvetica Neue", Arial, Helvetica, sans-serif;}
+body {background: #FFF url(../img/bg.png) repeat 0 0;font-size:75%;color:#000;font-family:"proxima-nova-1","proxima-nova-2","Proxima Nova", "Helvetica Neue", Arial, Helvetica, sans-serif;}
 h1, h2, h3, h4, h5, h6 {font-weight:bold;color:#000;}
 h1 {font-size:7em;line-height:1;margin-bottom:0.5em;}
 h2 {font-size:3em;margin-bottom:0.75em; text-align: center;}
@@ -110,7 +110,7 @@ h1 {
 
 h1 strong {
   font-size: 24px;
-  font-family: Georgia, Times, serif;
+  font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2", Georgia, Times, serif;
   font-style: italic;
   font-weight: normal;
   display: block;
