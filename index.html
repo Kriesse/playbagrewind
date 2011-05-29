@@ -209,67 +209,17 @@
   var berlin = new google.maps.LatLng(52.499282,13.457329);
   var MHDB002 = new google.maps.LatLng(52.50030707424932,13.452984094619751);
 
-  var MY_MAPTYPE_ID = 'MHDB11';
-
   function initialize() {
-
-    var style = [
-      {
-        featureType: "all",
-        elementType: "geometry",
-        stylers: [
-          { hue: "#FFFFFF" },
-          { saturation: -100 },
-          { lightness: 0}
-        ]
-      },
-      {
-        featureType: "water",
-        elementType: "geometry",
-        stylers: [
-          { hue: "#FFFFFF" },
-          { saturation: -100 },
-          { lightness: 0}
-        ]
-      },
-      {
-        featureType: "road.local",
-        elementType: "geometry",
-        stylers: [
-          { hue: "#FFFFFF" },
-          //{ saturation: 100 },
-          { lightness: 40}
-        ]
-      },
-      {
-        featureType: "landscape",
-        elementType: "geometry",
-        stylers: [
-          { hue: "#FFF" },
-          { saturation: 75 },
-          { lightness: 100}
-        ]
-      }
-    ];
 
     var mapOptions = {
       zoom: 13,
       center: berlin,
-      mapTypeControlOptions: {
-         mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
-      },
-      mapTypeId: MY_MAPTYPE_ID
+      mapTypeId: google.maps.MapTypeId.TERRAIN,
+      mapTypeControl: false
     };
 
-    map = new google.maps.Map(document.getElementById("map_canvas"),
-        mapOptions);
-
-    var styledMapOptions = {
-      name: "MHDB11"
-    };
-
-    var jayzMapType = new google.maps.StyledMapType(style, styledMapOptions);    
-
+    map = new google.maps.Map(document.getElementById("map_canvas"),mapOptions);
+        
     // CUSTOM MARKER //
     
     var image = new google.maps.MarkerImage(
@@ -301,7 +251,6 @@
       icon: image,
       shadow: shadow,
       shape: shape
-      //map: map,
     });
 
     var MHDB002Infowindow = new google.maps.InfoWindow({
