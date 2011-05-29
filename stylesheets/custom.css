@@ -186,3 +186,7 @@ li.last,
   width: 100px !important;
   display: block;
 }
+
+.about{
+  display:none;
+}
