@@ -276,7 +276,14 @@
         content:"This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now."
     });
 
+    google.maps.event.addListener(MHDB002Marker, 'click', function() {
+        MHDB002Infowindow.open(map,MHDB002Marker);
+      });
+
+
     map.mapTypes.set(MY_MAPTYPE_ID, jayzMapType);
+    
+    
   }
   </script>
 
