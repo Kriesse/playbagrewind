@@ -66,7 +66,7 @@ h1 strong {
 }
 
 .small_list li {
-  margin-right: 2ex;
+  margin-right: 1.5ex;
   margin-bottom: .75em;
   font-style: italic;
   color: #979797;
@@ -91,7 +91,7 @@ h1 strong {
   -webkit-border-radius: 1em;
   -o-border-radius: 1em;
   border-radius: 1em;
-  padding: 0 1ex 0 3ex;
+  padding: 0 1.5ex 0 2.5ex;
   position: relative;
   color: #FFF;
   text-decoration: none;
