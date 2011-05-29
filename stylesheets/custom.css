@@ -62,7 +62,7 @@ p {margin:0 0 1.5em;}
 
 .small_list li {
   margin-right: 2ex;
-  margin-bottom: .5em;
+  margin-bottom: .75em;
   font-style:italic;
   color:#979797;
 }
@@ -90,6 +90,18 @@ p {margin:0 0 1.5em;}
   padding:0 1ex;	
   position:relative;
   color:#fff;
+  text-decoration:none;
+  font-style:normal;
+  display:block;
+  -webkit-transition:background border-color 1.0s ease-in-out;
+	-moz-transition:background border-color 1.0s ease-in-out;
+	-o-transition:background border-color 1.0s ease-in-out;
+	-ms-transition:background border-color 1.0s ease-in-out;	
+	-transition:background border-color 1.0s ease-in-out;
+}
+.small_list li a:hover {
+  background: #CB3900;
+  border-color:#CB3900;
 }
 
 
