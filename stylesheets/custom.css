@@ -153,9 +153,10 @@ h1 strong {
   background-position: 50% -6em;
 }
 
-.item_list li {
+.item_list > li {
   width: 220px;
-  margin-right: 20px;
+  margin-right: 5px;
+  border: 5px solid #FFF;
 }
 
 .item_list ul {
@@ -359,5 +360,10 @@ li.last,
 }
 
 .tapeHighlight{
-  background: red;
+  background: #EEE;
+  border: 5px solid #333 !important;
+}
+
+.hidden{
+  display:none;
 }
