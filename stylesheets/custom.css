@@ -302,6 +302,11 @@ li.last,
 
 /* map active visual cue */
 
+.map_wrapper {
+  padding: 6px 0;
+  background: transparent url(../img/mhd_pttrn.png) repeat 0 0;
+}
+
 .map.container {
   padding: 4px;
   -webkit-transition: border 1.0s ease-in-out;
