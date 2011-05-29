@@ -238,7 +238,7 @@ header .separator{
 }
 
 .separator.play span.back {
-  background-position: 50% -26.7em;
+  background-position: 50% -28.8em;
   left: -530px;
   width: 1em;
   height: 1em;
@@ -246,7 +246,7 @@ header .separator{
 }
 
 .separator.play span.fwd {
-  background-position: 50% -25.4em;
+  background-position: 50% -26.6em;
   left: 530px;
   width: 1em;
   height: 1em;
@@ -389,7 +389,10 @@ li.last,
 
 .tapeHighlight{
   background: #EEE;
-  border: 5px solid #333 !important;
+  border: 5px solid #CB3900 !important;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 
 .hidden{
