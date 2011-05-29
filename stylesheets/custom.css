@@ -67,6 +67,21 @@ p {margin:0 0 1.5em;}
   border-radius: 3em;
 }
 
+.item_list li,
+.step_list li {
+  width: 220px;
+  margin-right: 20px;
+}
+
+.step_list li {
+  width: 300px;
+}
+
+.step_list li.last,
+.item_list li.last {
+  margin-right: 0;
+}
+
 .item_list li {
   width: 220px;
   margin-right: 20px;
