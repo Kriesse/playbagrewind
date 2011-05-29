@@ -21,7 +21,7 @@ body {background: #FFF url(../img/bg.png) repeat 0 0;font-size:100%;color:#000;f
 h1, h2, h3, h4, h5, h6 {font-weight:bold;color:#000;}
 h1 {font-size:4.5em;line-height:1;margin-bottom:0.5em;}
 h2 {font-size:2.25em;margin-bottom:0.75em; text-align: center;}
-h3 {font-size:1.5em;line-height:1;margin-bottom:1em;}
+h3 {font-size:1.5em;line-height:1;margin-bottom:1em;text-align: center;}
 h4 {font-size:1.2em;line-height:1.25;margin-bottom:1.25em;}
 h5 {font-size:1em;font-weight:bold;margin-bottom:1.5em;}
 h6 {font-size:1em;font-weight:bold;}
@@ -47,10 +47,6 @@ p {margin:0 0 1.5em;}
 .inline_list li {
   float: left;
   list-style: none;
-}
-
-.inline_list ul li {
-  color: #979797;
 }
 
 .inline_list em {
@@ -86,6 +82,16 @@ p {margin:0 0 1.5em;}
 .item_list li {
   width: 220px;
   margin-right: 20px;
+}
+
+.item_list ul {
+  overflow: hidden;
+  border-bottom: 1px solid #979797;
+  margin-bottom: 1.5em;
+}
+
+.item_list ul li {
+  color: #979797;
 }
 
 .span-6 {
