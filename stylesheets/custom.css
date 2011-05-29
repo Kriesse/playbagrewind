@@ -12,9 +12,6 @@ a img {border:none;}
 a.anchor{visibility: hidden}
 :focus {outline:0;}
 
-
-{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;}
-
 /* typography.css */
 html {font-size:100.01%;}
 body {background: #FFF url(../img/bg.png) repeat 0 0;font-size:100%;color:#000;font-family:"proxima-nova-1","proxima-nova-2","Proxima Nova", "Helvetica Neue", Arial, Helvetica, sans-serif;}
@@ -62,10 +59,39 @@ p {margin:0 0 1.5em;}
   -webkit-border-radius: 3em;
   border-radius: 3em;
 }
-
+/* small lists */
 .small_list li {
-  margin-right: 1em;
+  margin-right: 2ex;
+  margin-bottom: .5em;
+  font-style:italic;
+  color:#979797;
 }
+.small_list li a:before {
+  content:" ";
+  display:block;
+  background: #CB3900;
+  height: 12px;
+  width: 12px;
+  -moz-border-radius:6px;
+  -webkit-border-radius:15px;
+  -o-border-radius:15px;
+  border-radius:15px;
+  position:absolute;
+  left:-1ex;
+  top:.25em;
+}
+.small_list li a {
+  background: #979797;
+  border:1px solid #979797;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  -o-border-radius:6px;
+  border-radius:6px;
+  padding:0 1ex;	
+  position:relative;
+  color:#fff;
+}
+
 
 .span-6,
 .item_list li,
@@ -178,7 +204,7 @@ li.last,
   text-align: center;
   width: 150px;
   text-decoration: none;
-  display: block
+  display: block;
 }
 
 #mhd a span {
@@ -189,4 +215,8 @@ li.last,
 
 .about{
   display:none;
+}
+
+#map_canvas {
+
 }
