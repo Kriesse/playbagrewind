@@ -9,7 +9,7 @@ table, th, td {vertical-align:middle;}
 blockquote:before, blockquote:after, q:before, q:after {content:'';}
 blockquote, q {quotes:"" "";}
 a img {border:none;}
-a.anchor{visibility: hidden, display: none}
+.anchor{visibility: hidden; display: none}
 :focus {outline:0;}
 
 /* typography.css */
@@ -139,7 +139,8 @@ p {margin:0 0 1.5em;}
 .item_list ul {
   overflow: hidden;
   border-bottom: 1px solid #979797;
-  margin-bottom: 1.5em;
+  margin-bottom: 3em;
+  font-size: 0.75em;
 }
 
 .item_list ul li {
@@ -158,8 +159,13 @@ header {
 
 section {
   margin: 0;
-  padding: 4.5em 0;
+  padding: 3em 0;
   overflow: hidden;
+}
+
+#gallery {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 
 h1 {
