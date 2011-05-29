@@ -372,3 +372,46 @@ li.last,
 .hidden{
   display:none;
 }
+
+/*
+
+thank you section
+
+*/
+
+.container.thanks {
+  max-width: 340px;
+}
+header.bgLine {
+  padding:0;
+  background: url("../img/bgH2.png") repeat-x 0 1.75em;
+}
+.bgLine h2 {
+  display:inline-block;
+  background: url("../img/bg.png") repeat scroll 0 0;
+  padding:0 2ex;
+}
+.imgContainer {
+  color:transparent;
+}
+.thanks h3 {
+  margin: 0 10px;
+}
+.thanks .imgContainer a {
+  background:url("../img/hackDayLogo.png") no-repeat center 0;
+  width:320px;
+  height:40px;
+  display:block;
+  margin-bottom:1.5em;
+  border-bottom: 2px solid transparent;
+}
+.thanks .imgContainer a:hover {
+  border-color: #CB3900;
+}
+.thanks p {
+  padding: 0 20px;
+  margin-bottom:3em;
+}
+
+
+
