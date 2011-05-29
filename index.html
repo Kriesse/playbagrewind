@@ -11,6 +11,7 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script type="text/javascript" src="http://use.typekit.com/nem6qjx.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
   <body onload="initialize()">
@@ -216,6 +217,14 @@
 
   function initialize() {
 
+  $(".highlight-link").live('click', function(){
+    var parent = $(this).parent();  
+    var meta = $(this).parent().children('.meta').first();
+    var liID = meta.text();
+    console.log("highlight li #: "+meta.text());
+    $("#gallery ul").children(liID).addClass("hidden");
+  });
+  
     var mapOptions = {
       zoom: 13,
       center: berlin,
@@ -275,7 +284,7 @@
     });
 
     var MHDB003Infowindow = new google.maps.InfoWindow({
-        content:'<h4>Little Bit Closer</h4><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#row1">Listen to the tape</a>'
+        content:'<span class="hidden meta">1</span><h4>Little Bit Closer</h4><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#row1" class="highlight-link">Listen to the tape</a>'
 
     });
 
@@ -287,10 +296,6 @@
       MHDB003Infowindow.open(map,MHDB003Marker);
     });
 
-
-    map.mapTypes.set(MY_MAPTYPE_ID, jayzMapType);
-    
-    
   }
   </script>
   <!-- Piwik -->

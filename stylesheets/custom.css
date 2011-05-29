@@ -260,3 +260,7 @@ li.last,
 #map_canvas {
 
 }
+
+.tapeHighlight{
+  border: 5px solid red;
+}
