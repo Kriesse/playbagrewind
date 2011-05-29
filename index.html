@@ -208,6 +208,24 @@
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
   <script>
+  
+  $(document).ready(function(){
+    $(".highlight-link").live('click', function(){
+      var parent = $(this).parent();  
+      var meta = $(this).parent().children('.meta').first();
+      var liID = meta.text();
+      var target = $("#gallery ul").children("li:eq("+liID+")");
+      target.addClass("tapeHighlight");
+      $('html,body').animate({
+          scrollTop: '+=' + $(target).offset().top + 'px'
+      }, 'slow');
+    });
+  })
+  
+
+  </script>
+  <script>
+  
 
   var map;
   var berlin = new google.maps.LatLng(52.499282,13.457329);
@@ -217,13 +235,7 @@
 
   function initialize() {
 
-  $(".highlight-link").live('click', function(){
-    var parent = $(this).parent();  
-    var meta = $(this).parent().children('.meta').first();
-    var liID = meta.text();
-    console.log("highlight li #: "+meta.text());
-    $("#gallery ul").children(liID).addClass("hidden");
-  });
+
   
     var mapOptions = {
       zoom: 13,
