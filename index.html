@@ -6,7 +6,7 @@
     <title>Music Haekel Day</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="stylesheets/custom.css" type="text/css" media="screen" />
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <!--[if IE]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -88,8 +88,9 @@
         <h2>Items</h2>
 
         <ul class="inline_list item_list">
-
+        
           <li>
+          <a class="anchor" name="row1">First row of Objects</a>
             <object height="219" width="219"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16108749&amp;auto_play=false&amp;player_type=artwork&amp;color=000000"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="219" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16108749&amp;auto_play=false&amp;player_type=artwork&amp;color=000000" type="application/x-shockwave-flash" width="219"></embed> </object>   
             <ul>
               <li>created by: <a href="#">Espy</a></li>
@@ -122,6 +123,7 @@
           </li>
 
           <li>
+            <a class="anchor" name="row2">Second row of Objects</a>
             <img src="img/placeholder.jpg" alt="Item 01" />
             <ul>
               <li>created by: <a href="#">Espy</a></li>
@@ -257,7 +259,7 @@
     });
 
     var MHDB002Infowindow = new google.maps.InfoWindow({
-        content:"This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now."
+       content:"Lalala <a href='http://google.com'>google</a>"
     });
     
     var MHDB003Marker = new google.maps.Marker({ 
@@ -273,12 +275,17 @@
     });
 
     var MHDB003Infowindow = new google.maps.InfoWindow({
-        content:"This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now."
+        content:'<h1>Little Bit Closer</1><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#row1">Listen to the tape</a>'
+
     });
 
     google.maps.event.addListener(MHDB002Marker, 'click', function() {
-        MHDB002Infowindow.open(map,MHDB002Marker);
-      });
+      MHDB002Infowindow.open(map,MHDB002Marker);
+    });
+    
+    google.maps.event.addListener(MHDB003Marker, 'click', function() {
+      MHDB003Infowindow.open(map,MHDB003Marker);
+    });
 
 
     map.mapTypes.set(MY_MAPTYPE_ID, jayzMapType);
