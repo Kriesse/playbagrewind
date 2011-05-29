@@ -157,12 +157,12 @@ h1 strong {
   width: 220px;
   margin-right: 5px;
   border: 5px solid #FFF;
+  margin-bottom: 3em;
 }
 
 .item_list ul {
   overflow: hidden;
   border-bottom: 1px solid #979797;
-  margin-bottom: 3em;
   font-size: 0.75em;
 }
 
@@ -330,11 +330,6 @@ li.last,
 }
 
 /* map active visual cue */
-
-.map_wrapper {
-  padding: 6px 0;
-  background: transparent url(../img/mhd_pttrn.png) repeat 0 0;
-}
 
 .map.container {
   padding: 4px;
