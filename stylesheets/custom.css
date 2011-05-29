@@ -389,7 +389,10 @@ li.last,
 
 .tapeHighlight{
   background: #EEE;
-  border: 5px solid #333 !important;
+  border: 5px solid #CB3900 !important;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 
 .hidden{
