@@ -276,6 +276,8 @@
   var MHDB001 = new google.maps.LatLng(52.50101897538426,13.451042175292969);
   var MHDB002 = new google.maps.LatLng(52.50030707424932,13.452984094619751);
   var MHDB003 = new google.maps.LatLng(52.49322254002733,13.44251811504364);
+  var MHDB004 = new google.maps.LatLng(52.46322254002733,13.42251811504364);
+  var MHDB005 = new google.maps.LatLng(52.47322254002733,13.43251811504364);
   
 
   function initialize() {
@@ -361,6 +363,40 @@
 
     });
     
+    var MHDB004Marker = new google.maps.Marker({ 
+      position: MHDB004, 
+      map: map, 
+      title:"It All Comes Back To You", 
+      draggable: false,
+      raiseOnDrag: false,
+      icon: image,
+      shadow: shadow,
+      shape: shape
+      //map: map,
+    });
+
+    var MHDB004Infowindow = new google.maps.InfoWindow({
+        content:'<span class="hidden meta">3</span><h4>It All Comes Back To You</h4><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#" class="highlight-link">Listen to the tape</a>'
+
+    });
+    
+    var MHDB005Marker = new google.maps.Marker({ 
+      position: MHDB005, 
+      map: map, 
+      title:"Sureshot", 
+      draggable: false,
+      raiseOnDrag: false,
+      icon: image,
+      shadow: shadow,
+      shape: shape
+      //map: map,
+    });
+
+    var MHDB005Infowindow = new google.maps.InfoWindow({
+        content:'<span class="hidden meta">4</span><h4>Sureshot</h4><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#" class="highlight-link">Listen to the tape</a>'
+
+    });
+    
     var lastOpenWindow;
     
     google.maps.event.addListener(MHDB001Marker, 'click', function() {
@@ -379,6 +415,18 @@
       if(lastOpenWindow) lastOpenWindow.close();  
       MHDB003Infowindow.open(map,MHDB003Marker);
       lastOpenWindow = MHDB003Infowindow;
+    });
+    
+    google.maps.event.addListener(MHDB004Marker, 'click', function() {
+      if(lastOpenWindow) lastOpenWindow.close();  
+      MHDB004Infowindow.open(map,MHDB004Marker);
+      lastOpenWindow = MHDB004Infowindow;
+    });
+        
+    google.maps.event.addListener(MHDB005Marker, 'click', function() {
+      if(lastOpenWindow) lastOpenWindow.close();  
+      MHDB005Infowindow.open(map,MHDB005Marker);
+      lastOpenWindow = MHDB005Infowindow;
     });
     
   }
