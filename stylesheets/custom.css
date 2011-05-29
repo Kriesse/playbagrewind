@@ -16,7 +16,7 @@ a.anchor{visibility: hidden;}
 html {font-size:100.01%;}
 body {background: #FFF url(../img/bg.png) repeat 0 0;font-size:100%;color:#000;font-family:"proxima-nova-1","proxima-nova-2","Proxima Nova", "Helvetica Neue", Arial, Helvetica, sans-serif;}
 h1, h2, h3, h4, h5, h6 {font-weight:bold;color:#000;}
-h1 {font-size:4.5em;line-height:1;margin-bottom:0.5em;}
+h1 {font-size:4.5em;line-height:1.5em;margin-bottom:0.5em;}
 h2 {font-size:2.25em;margin-bottom:0.75em; text-align: center;}
 h3 {font-size:1.5em;line-height:1;margin-bottom:1em;text-align: center;}
 h4 {font-size:1.2em;line-height:1.25;margin-bottom:1.25em;}
@@ -24,7 +24,7 @@ h5 {font-size:1em;font-weight:bold;margin-bottom:1.5em;}
 h6 {font-size:1em;font-weight:bold;}
 h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
 p {margin:0 0 1.5em;}
-
+.highlight{color: #CB3900}
 p,
 h1 strong {
   font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2", Georgia, Times, serif;
@@ -153,9 +153,10 @@ h1 strong {
   background-position: 50% -6em;
 }
 
-.item_list li {
+.item_list > li {
   width: 220px;
-  margin-right: 20px;
+  margin-right: 5px;
+  border: 5px solid #FFF;
 }
 
 .item_list ul {
@@ -186,12 +187,17 @@ h1 strong {
 header {
   padding-top: 4em;
   text-align: center;
+  background: url(../img/line.png) repeat-x 0px 7.3em;
 }
 
 section {
   margin: 0;
   padding: 3em 0;
   overflow: hidden;
+}
+
+header .container{
+  background: url(../img/header.png) no-repeat 20px 0px;
 }
 
 .separator {
@@ -230,7 +236,7 @@ h1 {
 }
 
 h1 strong {
-  font-size: 24px;
+  font-size: 32px;
   font-style: italic;
   font-weight: normal;
   display: block;
@@ -359,7 +365,12 @@ li.last,
 }
 
 .tapeHighlight{
-  background: red;
+  background: #EEE;
+  border: 5px solid #333 !important;
+}
+
+.hidden{
+  display:none;
 }
 
 /*
