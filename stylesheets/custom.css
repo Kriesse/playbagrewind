@@ -119,15 +119,15 @@ h1 strong {
 }
 
 /* links */
-a, 
-a:link, 
+a,
+a:link,
 a:visited {
   color: #CB3900;
   text-decoration: none;
 }
 
-a:hover, 
-a:active, 
+a:hover,
+a:active,
 a:focus {
   color: #CB3900;
   text-decoration: underline;
