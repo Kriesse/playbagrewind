@@ -238,7 +238,7 @@ header .separator{
 }
 
 .separator.play span.back {
-  background-position: 50% -26.7em;
+  background-position: 50% -28.8em;
   left: -530px;
   width: 1em;
   height: 1em;
@@ -246,7 +246,7 @@ header .separator{
 }
 
 .separator.play span.fwd {
-  background-position: 50% -25.4em;
+  background-position: 50% -26.6em;
   left: 530px;
   width: 1em;
   height: 1em;
