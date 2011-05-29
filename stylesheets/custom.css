@@ -49,20 +49,6 @@ p {margin:0 0 1.5em;}
   list-style: none;
 }
 
-.inline_list em {
-  display: block;
-  width: 6em;
-  height: 6em;
-  margin: 0 auto 3em auto;
-  background: #000;
-  color: #FFF;
-  text-align: center;
-  text-indent: -9999px;
-  -moz-border-radius: 3em;
-  -webkit-border-radius: 3em;
-  border-radius: 3em;
-}
-
 .small_list li {
   margin-right: 1em;
 }
@@ -75,8 +61,34 @@ p {margin:0 0 1.5em;}
   float: left;
 }
 
+
+/* step_list */
 .step_list li {
   width: 300px;
+}
+
+.step_list em {
+  display: block;
+  width: 5em;
+  height: 5em;
+  margin: 0 auto 3em auto;
+  background: #000 url(../img/mhd_icons.png) no-repeat 50% 2.2em;
+  color: #FFF;
+  text-align: center;
+  text-indent: -9999px;
+  -moz-border-radius: 3em;
+  -webkit-border-radius: 3em;
+  border-radius: 3em;
+}
+
+.step_list .step_01 em {
+  background-position: 50% 1.8em;
+}
+.step_list .step_02 em {
+  background-position: 50% -2.4em;
+}
+.step_list .step_03 em {
+  background-position: 50% -6em;
 }
 
 .item_list li {
