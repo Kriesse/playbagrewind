@@ -9,7 +9,7 @@ table, th, td {vertical-align:middle;}
 blockquote:before, blockquote:after, q:before, q:after {content:'';}
 blockquote, q {quotes:"" "";}
 a img {border:none;}
-a.anchor{visibility: hidden}
+a.anchor{visibility: hidden; display: none;}
 :focus {outline:0;}
 
 /* typography.css */
@@ -59,7 +59,7 @@ p {margin:0 0 1.5em;}
   -webkit-border-radius: 3em;
   border-radius: 3em;
 }
-/* small lists */
+
 .small_list li {
   margin-right: 2ex;
   margin-bottom: .75em;
@@ -113,8 +113,34 @@ p {margin:0 0 1.5em;}
   float: left;
 }
 
+
+/* step_list */
 .step_list li {
   width: 300px;
+}
+
+.step_list em {
+  display: block;
+  width: 5em;
+  height: 5em;
+  margin: 0 auto 3em auto;
+  background: #000 url(../img/mhd_icons.png) no-repeat 50% 2.2em;
+  color: #FFF;
+  text-align: center;
+  text-indent: -9999px;
+  -moz-border-radius: 3em;
+  -webkit-border-radius: 3em;
+  border-radius: 3em;
+}
+
+.step_list .step_01 em {
+  background-position: 50% 1.8em;
+}
+.step_list .step_02 em {
+  background-position: 50% -2.4em;
+}
+.step_list .step_03 em {
+  background-position: 50% -6em;
 }
 
 .item_list li {
@@ -125,7 +151,8 @@ p {margin:0 0 1.5em;}
 .item_list ul {
   overflow: hidden;
   border-bottom: 1px solid #979797;
-  margin-bottom: 1.5em;
+  margin-bottom: 3em;
+  font-size: 0.75em;
 }
 
 .item_list ul li {
@@ -144,8 +171,13 @@ header {
 
 section {
   margin: 0;
-  padding: 4.5em 0;
+  padding: 3em 0;
   overflow: hidden;
+}
+
+#gallery {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 
 h1 {
@@ -225,6 +257,6 @@ li.last,
   display: block;
 }
 
-/* map interaction */
 #map_canvas {
+
 }
