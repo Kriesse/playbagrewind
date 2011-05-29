@@ -96,7 +96,7 @@
         <ul class="inline_list item_list">
         
           <li>
-            <object height="219" width="219"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16108749&amp;auto_play=false&amp;player_type=artwork&amp;color=000000"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="219" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16108749&amp;auto_play=false&amp;player_type=artwork&amp;color=000000" type="application/x-shockwave-flash" width="219"></embed> </object>   
+            <object height="219" width="219"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16108736&amp;auto_play=false&amp;player_type=artwork&amp;color=000000"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="219" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16108736&amp;auto_play=false&amp;player_type=artwork&amp;color=000000" type="application/x-shockwave-flash" width="219"></embed> </object>     
             <ul>
               <li class="created">created by: <a href="#">Espy</a></li>
               <li class="located">located at: <a href="#">lala</a></li>
@@ -112,7 +112,7 @@
           </li>
 
           <li>
-            <img src="img/placeholder.jpg" alt="Item 01" />
+            <object height="219" width="219"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16108749&amp;auto_play=false&amp;player_type=artwork&amp;color=000000"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="219" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16108749&amp;auto_play=false&amp;player_type=artwork&amp;color=000000" type="application/x-shockwave-flash" width="219"></embed> </object>   
             <ul>
               <li class="created">created by: <a href="#">Espy</a></li>
               <li class="located">located at: <a href="#">lala</a></li>
@@ -252,6 +252,7 @@
 
   var map;
   var berlin = new google.maps.LatLng(52.499282,13.457329);
+  var MHDB001 = new google.maps.LatLng(52.50101897538426,13.451042175292969);
   var MHDB002 = new google.maps.LatLng(52.50030707424932,13.452984094619751);
   var MHDB003 = new google.maps.LatLng(52.49322254002733,13.44251811504364);
   
@@ -291,6 +292,22 @@
     };
 
     // LOCATIONS //
+    
+    var MHDB001Marker = new google.maps.Marker({ 
+      position: MHDB001, 
+      map: map, 
+      title:"Baroque CLip 01", 
+      draggable: false,
+      raiseOnDrag: false,
+      icon: image,
+      shadow: shadow,
+      shape: shape
+    });
+
+    var MHDB001Infowindow = new google.maps.InfoWindow({
+       content:'<span class="hidden meta">1</span><h4>Baroque Clip 01</h4><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#" class="highlight-link">Listen to the tape</a>'
+    });
+    
     var MHDB002Marker = new google.maps.Marker({ 
       position: MHDB002, 
       map: map, 
@@ -319,7 +336,7 @@
     });
 
     var MHDB003Infowindow = new google.maps.InfoWindow({
-        content:'<span class="hidden meta">1</span><h4>Little Bit Closer</h4><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#" class="highlight-link">Listen to the tape</a>'
+        content:'<span class="hidden meta">3</span><h4>Little Bit Closer</h4><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#" class="highlight-link">Listen to the tape</a>'
 
     });
 
