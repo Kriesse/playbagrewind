@@ -11,6 +11,7 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script type="text/javascript" src="http://use.typekit.com/nem6qjx.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
   <body onload="initialize()">
@@ -35,8 +36,8 @@
 
 
     <section>
-      <div class="container">
-        <div id="map_canvas" style="width: 960px; height: 480px;"></div>
+      <div class="container map">
+        <div id="map_canvas"></div>
       </div>
     </section>
 
@@ -82,7 +83,10 @@
         </p>
       </div>
     </section>
-
+    
+    <p class="separator tape">
+      <span>Tape Gallery</span>
+    </p>
     <section id="gallery">
       <div class="container">
         <h2>Items</h2>
@@ -93,24 +97,24 @@
             <a class="anchor" name="row1">First row of Objects</a>
             <object height="219" width="219"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16108749&amp;auto_play=false&amp;player_type=artwork&amp;color=000000"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="219" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16108749&amp;auto_play=false&amp;player_type=artwork&amp;color=000000" type="application/x-shockwave-flash" width="219"></embed> </object>   
             <ul>
-              <li>created by: <a href="#">Espy</a></li>
-              <li>located at: <a href="#">lala</a></li>
+              <li class="created">created by: <a href="#">Espy</a></li>
+              <li class="located">located at: <a href="#">lala</a></li>
             </ul>
           </li>
 
           <li>
             <object height="219" width="219"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16096136&amp;auto_play=false&amp;player_type=artwork&amp;color=000000"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="219" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16096136&amp;auto_play=false&amp;player_type=artwork&amp;color=000000" type="application/x-shockwave-flash" width="219"></embed> </object>
             <ul>
-              <li>created by: <a href="#">Espy</a></li>
-              <li>located at: <a href="#">lala</a></li>
+              <li class="created">created by: <a href="#">Espy</a></li>
+              <li class="located">located at: <a href="#">lala</a></li>
             </ul>
           </li>
 
           <li>
             <img src="img/placeholder.jpg" alt="Item 01" />
             <ul>
-              <li>created by: <a href="#">Espy</a></li>
-              <li>located at: <a href="#">lala</a></li>
+              <li class="created">created by: <a href="#">Espy</a></li>
+              <li class="located">located at: <a href="#">lala</a></li>
             </ul>
           </li>
 
@@ -159,10 +163,31 @@
 
       </div>
     </section>
-
+       
+    <p class="separator yay">
+      <span>Yay!</span>
+    </p>
+    
     <section>
       <div class="container">
 
+        <h2>Thank you</h2>
+        <p>
+          <a href="http://berlin.musichackday.org/2011/" title="Music Hack Day Berlin 2011">Music Hack Day Berlin 2011</a>
+        </p>
+
+      </div>
+    </section>
+
+
+    
+    <p class="separator heart">
+      <span><3</span>
+    </p>
+    
+    <footer id="footer">
+      <div class="container">
+        
         <div class="span-6">
           <h2>People involved</h2>
           <ul class="inline_list small_list">
@@ -191,14 +216,9 @@
             <li><a href="#">Fritz Kola</a></li>
           </ul>
         </div>
-
-      </div>
-    </section>
-
-    <footer id="footer">
-      <div class="container">
+        
         <p>
-          Thank you, <a href="http://berlin.musichackday.org/2011/" title="Music Hack Day Berlin 2011">Music Hack Day Berlin 2011</a>
+          <img src="img/mhd_illu.png" alt="Tape Illustration">
         </p>
       </div>
     </footer>
@@ -216,6 +236,14 @@
 
   function initialize() {
 
+  $(".highlight-link").live('click', function(){
+    var parent = $(this).parent();  
+    var meta = $(this).parent().children('.meta').first();
+    var liID = meta.text();
+    console.log("highlight li #: "+meta.text());
+    $("#gallery ul").children(liID).addClass("hidden");
+  });
+  
     var mapOptions = {
       zoom: 13,
       center: berlin,
@@ -275,7 +303,7 @@
     });
 
     var MHDB003Infowindow = new google.maps.InfoWindow({
-        content:'<h4>Little Bit Closer</h4><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#row1">Listen to the tape</a>'
+        content:'<span class="hidden meta">1</span><h4>Little Bit Closer</h4><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#row1" class="highlight-link">Listen to the tape</a>'
 
 
     });
@@ -288,10 +316,6 @@
       MHDB003Infowindow.open(map,MHDB003Marker);
     });
 
-
-    map.mapTypes.set(MY_MAPTYPE_ID, jayzMapType);
-    
-    
   }
   </script>
   <!-- Piwik -->
