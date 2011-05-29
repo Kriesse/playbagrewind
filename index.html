@@ -14,11 +14,11 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
   <body onload="initialize()">
-      <div id="mhd">
+    <div id="mhd">
       <a href="http://berlin.musichackday.org/2011/">
           <span>Music Hack Day</span>Berlin 2011
       </a>
-      </div>
+    </div>
     <header class="header">
       <div class="container">
         <h1>
@@ -62,21 +62,21 @@
             <em>1</em>
             <h3>Find a haekel thing</h3>
             <p>
-              You find a tape, either in the real world (by chance or with the map at the top of the page) or in the gallery below.
+              You find a tape, either in the real world or in the gallery below.
             </p>
           </li>
           <li>
             <em>2</em>
             <h3>Scan the QR code</h3>
             <p>
-              You scan the QR code with the camera of your smartphone. You can use free apps like <a href="http://redlaser.com/" title="Redlaser barcode scanning app for iPhone">Redlaser for iPhone and Android</a> to scan the code. If you haven’t got a camera or a code reader app, just enter the URL printed on the artwork’s label. Into your smartphone's browser.
+              You scan the QR code with the camera of your smartphone. You can use free apps like <a href="http://redlaser.com/" title="Redlaser barcode scanning app for iPhone">Redlaser for iPhone and Android</a> to scan the code. If you haven’t got a camera or a code reader app, just enter the URL printed on the artwork’s label into your smartphone's browser.
             </p>
           </li>
           <li class="last">
             <em>3</em>
             <h3>Listen to the the tape</h3>
             <p>
-              Your browser will open the Soundcloud page with a clip of audio from the actual tape used for the piece. Just press the play button. Instant time travel!
+              Your browser will open the Soundcloud page with an audio clip from the actual tape used for the piece. Just press the play button. Instant time travel!
             </p>
           </li>
         </ul>
@@ -209,68 +209,20 @@
   var map;
   var berlin = new google.maps.LatLng(52.499282,13.457329);
   var MHDB002 = new google.maps.LatLng(52.50030707424932,13.452984094619751);
-
-  var MY_MAPTYPE_ID = 'MHDB11';
+  var MHDB003 = new google.maps.LatLng(52.49322254002733,13.44251811504364);
+  
 
   function initialize() {
-
-    var style = [
-      {
-        featureType: "all",
-        elementType: "geometry",
-        stylers: [
-          { hue: "#FFFFFF" },
-          { saturation: -100 },
-          { lightness: 0}
-        ]
-      },
-      {
-        featureType: "water",
-        elementType: "geometry",
-        stylers: [
-          { hue: "#FFFFFF" },
-          { saturation: -100 },
-          { lightness: 0}
-        ]
-      },
-      {
-        featureType: "road.local",
-        elementType: "geometry",
-        stylers: [
-          { hue: "#FFFFFF" },
-          //{ saturation: 100 },
-          { lightness: 40}
-        ]
-      },
-      {
-        featureType: "landscape",
-        elementType: "geometry",
-        stylers: [
-          { hue: "#FFF" },
-          { saturation: 75 },
-          { lightness: 100}
-        ]
-      }
-    ];
 
     var mapOptions = {
       zoom: 13,
       center: berlin,
-      mapTypeControlOptions: {
-         mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
-      },
-      mapTypeId: MY_MAPTYPE_ID
+      mapTypeId: google.maps.MapTypeId.TERRAIN,
+      mapTypeControl: false
     };
 
-    map = new google.maps.Map(document.getElementById("map_canvas"),
-        mapOptions);
-
-    var styledMapOptions = {
-      name: "MHDB11"
-    };
-
-    var jayzMapType = new google.maps.StyledMapType(style, styledMapOptions);    
-
+    map = new google.maps.Map(document.getElementById("map_canvas"),mapOptions);
+        
     // CUSTOM MARKER //
     
     var image = new google.maps.MarkerImage(
@@ -302,10 +254,25 @@
       icon: image,
       shadow: shadow,
       shape: shape
-      //map: map,
     });
 
     var MHDB002Infowindow = new google.maps.InfoWindow({
+        content:"This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now."
+    });
+    
+    var MHDB003Marker = new google.maps.Marker({ 
+      position: MHDB003, 
+      map: map, 
+      title:"Little Bit Closer", 
+      draggable: false,
+      raiseOnDrag: false,
+      icon: image,
+      shadow: shadow,
+      shape: shape
+      //map: map,
+    });
+
+    var MHDB003Infowindow = new google.maps.InfoWindow({
         content:"This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now."
     });
 
