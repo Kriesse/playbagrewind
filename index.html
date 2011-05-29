@@ -14,11 +14,11 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
   <body onload="initialize()">
-      <div id="mhd">
+    <div id="mhd">
       <a href="http://berlin.musichackday.org/2011/">
           <span>Music Hack Day</span>Berlin 2011
       </a>
-      </div>
+    </div>
     <header class="header">
       <div class="container">
         <h1>
@@ -62,21 +62,21 @@
             <em>1</em>
             <h3>Find a haekel thing</h3>
             <p>
-              You find a tape, either in the real world (by chance or with the map at the top of the page) or in the gallery below.
+              You find a tape, either in the real world or in the gallery below.
             </p>
           </li>
           <li>
             <em>2</em>
             <h3>Scan the QR code</h3>
             <p>
-              You scan the QR code with the camera of your smartphone. You can use free apps like <a href="http://redlaser.com/" title="Redlaser barcode scanning app for iPhone">Redlaser for iPhone and Android</a> to scan the code. If you haven’t got a camera or a code reader app, just enter the URL printed on the artwork’s label. Into your smartphone's browser.
+              You scan the QR code with the camera of your smartphone. You can use free apps like <a href="http://redlaser.com/" title="Redlaser barcode scanning app for iPhone">Redlaser for iPhone and Android</a> to scan the code. If you haven’t got a camera or a code reader app, just enter the URL printed on the artwork’s label into your smartphone's browser.
             </p>
           </li>
           <li class="last">
             <em>3</em>
             <h3>Listen to the the tape</h3>
             <p>
-              Your browser will open the Soundcloud page with a clip of audio from the actual tape used for the piece. Just press the play button. Instant time travel!
+              Your browser will open the Soundcloud page with an audio clip from the actual tape used for the piece. Just press the play button. Instant time travel!
             </p>
           </li>
         </ul>
@@ -90,7 +90,7 @@
         <ul class="inline_list item_list">
 
           <li>
-            <img src="img/placeholder.jpg" alt="Item 01" />
+            <object height="219" width="219"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16108749&amp;auto_play=false&amp;player_type=artwork&amp;color=000000"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="219" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16108749&amp;auto_play=false&amp;player_type=artwork&amp;color=000000" type="application/x-shockwave-flash" width="219"></embed> </object>   
             <ul>
               <li>created by: <a href="#">Espy</a></li>
               <li>located at: <a href="#">lala</a></li>
@@ -185,7 +185,8 @@
             <li><a href="#">HTML/CSS</a></li>
             <li><a href="#">Textmate</a></li>
             <li><a href="#">Nico Hagenburger</a></li>
-            <li><a href="#">??</a></li>
+            <li><a href="#">Club Mate</a></li>
+            <li><a href="#">Fritz Kola</a></li>
           </ul>
         </div>
 
@@ -208,6 +209,8 @@
   var map;
   var berlin = new google.maps.LatLng(52.499282,13.457329);
   var MHDB002 = new google.maps.LatLng(52.50030707424932,13.452984094619751);
+  var MHDB003 = new google.maps.LatLng(52.49322254002733,13.44251811504364);
+  
 
   function initialize() {
 
@@ -254,6 +257,22 @@
     });
 
     var MHDB002Infowindow = new google.maps.InfoWindow({
+        content:"This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now."
+    });
+    
+    var MHDB003Marker = new google.maps.Marker({ 
+      position: MHDB003, 
+      map: map, 
+      title:"Little Bit Closer", 
+      draggable: false,
+      raiseOnDrag: false,
+      icon: image,
+      shadow: shadow,
+      shape: shape
+      //map: map,
+    });
+
+    var MHDB003Infowindow = new google.maps.InfoWindow({
         content:"This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now."
     });
 
