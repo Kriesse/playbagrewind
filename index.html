@@ -257,7 +257,7 @@
     });
 
     var MHDB002Infowindow = new google.maps.InfoWindow({
-        content:"This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now."
+       content:"Lalala <a href='http://google.com'>google</a>"
     });
     
     var MHDB003Marker = new google.maps.Marker({ 
@@ -273,12 +273,16 @@
     });
 
     var MHDB003Infowindow = new google.maps.InfoWindow({
-        content:"This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now."
+        content:"Lalala <br /><a href='http://google.com'>google</a>"
     });
 
     google.maps.event.addListener(MHDB002Marker, 'click', function() {
-        MHDB002Infowindow.open(map,MHDB002Marker);
-      });
+      MHDB002Infowindow.open(map,MHDB002Marker);
+    });
+    
+    google.maps.event.addListener(MHDB003Marker, 'click', function() {
+      MHDB003Infowindow.open(map,MHDB003Marker);
+    });
 
 
     map.mapTypes.set(MY_MAPTYPE_ID, jayzMapType);
