@@ -247,6 +247,10 @@
           scrollTop: scrollTarget + 'px'
       }, 'slow');
     });
+    $("#gallery li").click(function(){
+      $(".tapeHighlight").removeClass("tapeHighlight");
+      $(this).addClass("tapeHighlight");
+    });
   })
   
 
