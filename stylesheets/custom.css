@@ -67,19 +67,20 @@ p {margin:0 0 1.5em;}
   border-radius: 3em;
 }
 
+.small_list li {
+  margin-right: 1em;
+}
+
+.span-6,
 .item_list li,
 .step_list li {
   width: 220px;
   margin-right: 20px;
+  float: left;
 }
 
 .step_list li {
   width: 300px;
-}
-
-.step_list li.last,
-.item_list li.last {
-  margin-right: 0;
 }
 
 .item_list li {
@@ -87,8 +88,8 @@ p {margin:0 0 1.5em;}
   margin-right: 20px;
 }
 
-.item_list li.last {
-  margin-right: 0;
+.span-6 {
+  width: 460px;
 }
 
 /* layout */
@@ -130,6 +131,18 @@ a:active,
 a:focus {
   color: #CB3900;
   text-decoration: underline;
+}
+
+li.last,
+.last {
+  margin-right: 0;
+}
+
+#footer {
+  background: #000;
+  color: #FFF;
+  padding: 1.5em 0;
+  text-align: center;
 }
 
 /* Music Hackday ribbon */
