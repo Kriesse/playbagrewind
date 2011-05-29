@@ -229,16 +229,17 @@
   <script>
   
   $(document).ready(function(){
-    $(".highlight-link").live('click', function(){
+    $(".highlight-link").live('click', function(event){
+      event.preventDefault();
       var parent = $(this).parent();  
       var meta = $(this).parent().children('.meta').first();
       var liID = meta.text();
       var target = $("#gallery ul").children("li:eq("+liID+")");
+      $(".tapeHighlight").removeClass("tapeHighlight");
       target.addClass("tapeHighlight");
-      var scrollTarget = $(target).offset().top - 400;
-      console.log("scrollTarget "+scrollTarget);
+      var scrollTarget = $(target).offset().top - 100;
       $('html,body').animate({
-          scrollTop: '+=' + scrollTarget + 'px'
+          scrollTop: scrollTarget + 'px'
       }, 'slow');
     });
   })
@@ -301,7 +302,7 @@
     });
 
     var MHDB002Infowindow = new google.maps.InfoWindow({
-       content:'<span class="hidden meta">2</span><h4>We Know What Works</h4><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#row1" class="highlight-link">Listen to the tape</a>'
+       content:'<span class="hidden meta">2</span><h4>We Know What Works</h4><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#" class="highlight-link">Listen to the tape</a>'
     });
     
     var MHDB003Marker = new google.maps.Marker({ 
@@ -317,7 +318,7 @@
     });
 
     var MHDB003Infowindow = new google.maps.InfoWindow({
-        content:'<span class="hidden meta">1</span><h4>Little Bit Closer</h4><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#row1" class="highlight-link">Listen to the tape</a>'
+        content:'<span class="hidden meta">1</span><h4>Little Bit Closer</h4><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#" class="highlight-link">Listen to the tape</a>'
 
     });
 
