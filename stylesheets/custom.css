@@ -153,9 +153,10 @@ h1 strong {
   background-position: 50% -6em;
 }
 
-.item_list li {
+.item_list > li {
   width: 220px;
-  margin-right: 20px;
+  margin-right: 5px;
+  border: 5px solid #FFF;
 }
 
 .item_list ul {
@@ -307,6 +308,11 @@ li.last,
 
 /* map active visual cue */
 
+.map_wrapper {
+  padding: 6px 0;
+  background: transparent url(../img/mhd_pttrn.png) repeat 0 0;
+}
+
 .map.container {
   padding: 4px;
   -webkit-transition: border 1.0s ease-in-out;
@@ -358,8 +364,11 @@ li.last,
   overflow:visible;
 }
 
-
-
 .tapeHighlight{
-  border: 5px solid red;
+  background: #EEE;
+  border: 5px solid #333 !important;
+}
+
+.hidden{
+  display:none;
 }

@@ -34,10 +34,11 @@
       </div>
     </header>
 
-
     <section>
       <div class="container map">
-        <div id="map_canvas"></div>
+        <div class="map_wrapper">
+          <div id="map_canvas"></div>
+        </div>
       </div>
     </section>
 
@@ -95,7 +96,6 @@
         <ul class="inline_list item_list">
         
           <li>
-            <a class="anchor" name="row1">First row of Objects</a>
             <object height="219" width="219"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16108749&amp;auto_play=false&amp;player_type=artwork&amp;color=000000"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="219" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16108749&amp;auto_play=false&amp;player_type=artwork&amp;color=000000" type="application/x-shockwave-flash" width="219"></embed> </object>   
             <ul>
               <li class="created">created by: <a href="#">Espy</a></li>
@@ -128,7 +128,6 @@
           </li>
 
           <li>
-            <a class="anchor" name="row2">Second row of Objects</a>
             <img src="img/placeholder.jpg" alt="Item 01" />
             <ul>
               <li>created by: <a href="#">Espy</a></li>
@@ -236,8 +235,10 @@
       var liID = meta.text();
       var target = $("#gallery ul").children("li:eq("+liID+")");
       target.addClass("tapeHighlight");
+      var scrollTarget = $(target).offset().top - 400;
+      console.log("scrollTarget "+scrollTarget);
       $('html,body').animate({
-          scrollTop: '+=' + $(target).offset().top + 'px'
+          scrollTop: '+=' + scrollTarget + 'px'
       }, 'slow');
     });
   })
@@ -300,7 +301,7 @@
     });
 
     var MHDB002Infowindow = new google.maps.InfoWindow({
-       content:"Lalala <a href='http://google.com'>google</a>"
+       content:'<span class="hidden meta">2</span><h4>We Know What Works</h4><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#row1" class="highlight-link">Listen to the tape</a>'
     });
     
     var MHDB003Marker = new google.maps.Marker({ 
