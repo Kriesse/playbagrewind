@@ -215,18 +215,37 @@
 
     var style = [
       {
-        featureType: "road",
+        featureType: "all",
         elementType: "geometry",
         stylers: [
-          { hue: -45 },
-          { saturation: 100 }
+          { hue: "#FFFFFF" },
+          { saturation: -100 },
+          { lightness: 0}
+        ]
+      },
+      {
+        featureType: "water",
+        elementType: "geometry",
+        stylers: [
+          { hue: "#FFFFFF" },
+          { saturation: -100 },
+          { lightness: 0}
+        ]
+      },
+      {
+        featureType: "road.local",
+        elementType: "geometry",
+        stylers: [
+          { hue: "#FFFFFF" },
+          //{ saturation: 100 },
+          { lightness: 40}
         ]
       },
       {
         featureType: "landscape",
         elementType: "geometry",
         stylers: [
-          { hue: "#FFFFFF" },
+          { hue: "#FFF" },
           { saturation: 75 },
           { lightness: 100}
         ]
