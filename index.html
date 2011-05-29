@@ -209,6 +209,8 @@
   var map;
   var berlin = new google.maps.LatLng(52.499282,13.457329);
   var MHDB002 = new google.maps.LatLng(52.50030707424932,13.452984094619751);
+  var MHDB003 = new google.maps.LatLng(52.49322254002733,13.44251811504364);
+  
 
   var MY_MAPTYPE_ID = 'MHDB11';
 
@@ -306,6 +308,22 @@
     });
 
     var MHDB002Infowindow = new google.maps.InfoWindow({
+        content:"This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now."
+    });
+    
+    var MHDB003Marker = new google.maps.Marker({ 
+      position: MHDB003, 
+      map: map, 
+      title:"Little Bit Closer", 
+      draggable: false,
+      raiseOnDrag: false,
+      icon: image,
+      shadow: shadow,
+      shape: shape
+      //map: map,
+    });
+
+    var MHDB003Infowindow = new google.maps.InfoWindow({
         content:"This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now."
     });
 
