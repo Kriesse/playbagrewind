@@ -73,12 +73,22 @@ p {margin:0 0 1.5em;}
   height: 12px;
   width: 12px;
   -moz-border-radius:6px;
-  -webkit-border-radius:15px;
-  -o-border-radius:15px;
-  border-radius:15px;
+  -webkit-border-radius:6px;
+  -o-border-radius:6px;
+  border-radius:6px;
   position:absolute;
-  left:-1ex;
-  top:.25em;
+  left:-6px;
+  top:6px;
+}
+.small_list li a:hover:before {
+  height:26px;
+  width:26px;
+  top:-1px;
+  z-index:-1;
+  -moz-border-radius:13px;
+  -webkit-border-radius:13px;
+  -o-border-radius:13px;
+  border-radius:13px;
 }
 .small_list li a {
   background: #979797;
@@ -87,17 +97,17 @@ p {margin:0 0 1.5em;}
   -webkit-border-radius:6px;
   -o-border-radius:6px;
   border-radius:6px;
-  padding:0 1ex;	
+  padding:0 6px 0 10px;	
   position:relative;
   color:#fff;
   text-decoration:none;
   font-style:normal;
   display:block;
-  -webkit-transition:background border-color 1.0s ease-in-out;
-	-moz-transition:background border-color 1.0s ease-in-out;
-	-o-transition:background border-color 1.0s ease-in-out;
-	-ms-transition:background border-color 1.0s ease-in-out;	
-	-transition:background border-color 1.0s ease-in-out;
+  -webkit-transition:background border 1.0s ease-in-out;
+	-moz-transition:background border 1.0s ease-in-out;
+	-o-transition:background border 1.0s ease-in-out;
+	-ms-transition:background border 1.0s ease-in-out;	
+	-transition:background border 1.0s ease-in-out;
 }
 .small_list li a:hover {
   background: #CB3900;
