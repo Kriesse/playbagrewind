@@ -167,6 +167,15 @@ h1 strong {
 
 .item_list ul li {
   color: #979797;
+  padding-left: 2.4em;
+  line-height: 2em;
+  background: transparent url(../img/mhd_icons.png) no-repeat -1em -23.2em;
+}
+.item_list ul li.created {
+  background-position: -1em -20em;
+}
+.item_list ul li.located {
+  background-position: -1em -23.2em;
 }
 
 .span-6 {
