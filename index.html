@@ -272,17 +272,24 @@
   </script>
   <script>
   
+  /*
+  
+  Hello fellow Haeklers, please take a moment to correct the positions of your work and update the comments accordingly.
+  
+  Thanks!
+  
+  */
 
   var map;
   var berlin = new google.maps.LatLng(52.499282,13.457329);
   var MHDB001 = new google.maps.LatLng(52.50101897538426,13.451042175292969); // fake position, removed
-  var MHDB002 = new google.maps.LatLng(52.50030707424932,13.452984094619751); // Actual position
-  var MHDB003 = new google.maps.LatLng(52.49322254002733,13.44251811504364);  // Actual position
+  var MHDB002 = new google.maps.LatLng(52.50030707424932,13.452984094619751); // actual position
+  var MHDB003 = new google.maps.LatLng(52.49322254002733,13.44251811504364);  // actual position
   var MHDB004 = new google.maps.LatLng(52.46322254002733,13.42251811504364);  // fake position
   var MHDB005 = new google.maps.LatLng(52.47322254002733,13.43251811504364);  // fake position
   var MHDB006 = new google.maps.LatLng(52.50322254002733,13.45251811504364);  // fake position
   var MHDB007 = new google.maps.LatLng(52.48322254002733,13.46251811504364);  // fake position, removed
-  // 008 missing
+  var MHDB008 = new google.maps.LatLng(52.48322254002733,13.46251811504364);  // fake position
 
   function initialize() {
 
@@ -434,6 +441,23 @@
         content:'<span class="hidden meta">6</span><h4>I Was Thrown Into Confusion</h4><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#" class="highlight-link">Listen to the tape</a>'
 
     });
+    
+    var MHDB008Marker = new google.maps.Marker({ 
+      position: MHDB008, 
+      map: map, 
+      title:"Black and White", 
+      draggable: false,
+      raiseOnDrag: false,
+      icon: image,
+      shadow: shadow,
+      shape: shape
+      //map: map,
+    });
+
+    var MHDB008Infowindow = new google.maps.InfoWindow({
+        content:'<span class="hidden meta">7</span><h4>Black and White><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#" class="highlight-link">Listen to the tape</a>'
+
+    });
 
     var lastOpenWindow;
     
@@ -477,6 +501,12 @@
       if(lastOpenWindow) lastOpenWindow.close();  
       MHDB007Infowindow.open(map,MHDB007Marker);
       lastOpenWindow = MHDB007Infowindow;
+    });
+    
+    google.maps.event.addListener(MHDB008Marker, 'click', function() {
+      if(lastOpenWindow) lastOpenWindow.close();  
+      MHDB008Infowindow.open(map,MHDB008Marker);
+      lastOpenWindow = MHDB008Infowindow;
     });
     
   }
