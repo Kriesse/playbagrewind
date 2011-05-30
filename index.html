@@ -159,26 +159,26 @@
             </li>
 
             <li>
-              <img src="img/placeholder.jpg" alt="Item 01" />
+              <object height="219" width="219"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16108750&amp;auto_play=false&amp;player_type=artwork&amp;color=000000"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="219" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16108750&amp;auto_play=false&amp;player_type=artwork&amp;color=000000" type="application/x-shockwave-flash" width="219"></embed> </object>   
               <ul>
-                <li>created by: <a href="#">-</a></li>
-                <li>located at: <a href="#">-</a></li>
+                <li>created by: <a href="#">Alex</a></li>
+                <li>located at: <a href="#">Euroko</a></li>
               </ul>
             </li>
 
             <li>
-              <img src="img/placeholder.jpg" alt="Item 01" />
+              <object height="219" width="219"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16108744&amp;auto_play=false&amp;player_type=artwork&amp;color=000000"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="219" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16108744&amp;auto_play=false&amp;player_type=artwork&amp;color=000000" type="application/x-shockwave-flash" width="219"></embed> </object>   
               <ul>
-                <li>created by: <a href="#">-</a></li>
-                <li>located at: <a href="#">-</a></li>
+                <li>created by: <a href="#">Everyone</a></li>
+                <li>located at: <a href="#">MTV Berlin</a></li>
               </ul>
             </li>
 
             <li class="last">
-              <img src="img/placeholder.jpg" alt="Item 01" />
+              <object height="219" width="219"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16091252&amp;auto_play=false&amp;player_type=artwork&amp;color=000000"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="219" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F16091252&amp;auto_play=false&amp;player_type=artwork&amp;color=000000" type="application/x-shockwave-flash" width="219"></embed> </object>   
               <ul>
-                <li>created by: <a href="#">-</a></li>
-                <li>located at: <a href="#">-</a></li>
+                <li>created by: <a href="#">Jeff</a></li>
+                <li>located at: <a href="#">Berlin</a></li>
               </ul>
 
             </div>
@@ -272,15 +272,26 @@
   </script>
   <script>
   
+  /*
+  
+  Hello fellow Haeklers, please take a moment to correct the positions of your work and update the comments accordingly.
+  
+  Thanks!
+  
+  */
 
   var map;
   var berlin = new google.maps.LatLng(52.499282,13.457329);
-  var MHDB001 = new google.maps.LatLng(52.50101897538426,13.451042175292969);
-  var MHDB002 = new google.maps.LatLng(52.50030707424932,13.452984094619751);
-  var MHDB003 = new google.maps.LatLng(52.49322254002733,13.44251811504364);
-  var MHDB004 = new google.maps.LatLng(52.50008827663046,13.46360027790069);
-  var MHDB005 = new google.maps.LatLng(52.50001316674902,13.458402156829834);
-  
+
+  var MHDB001 = new google.maps.LatLng(52.50101897538426,13.451042175292969); // fake position, removed
+  var MHDB002 = new google.maps.LatLng(52.50030707424932,13.452984094619751); // actual position
+  var MHDB003 = new google.maps.LatLng(52.49322254002733,13.44251811504364);  // actual position
+  var MHDB004 = new google.maps.LatLng(52.50008827663046,13.46360027790069);  // actual position
+  var MHDB005 = new google.maps.LatLng(52.50001316674902,13.458402156829834); // actual position
+  var MHDB006 = new google.maps.LatLng(52.50322254002733,13.45251811504364);  // fake position
+  var MHDB007 = new google.maps.LatLng(52.48322254002733,13.46251811504364);  // fake position, removed
+  var MHDB008 = new google.maps.LatLng(52.48322254002733,13.46251811504364);  // fake position
+
 
   function initialize() {
 
@@ -400,6 +411,57 @@
 
     });
     
+    var MHDB006Marker = new google.maps.Marker({ 
+      position: MHDB006, 
+      map: map, 
+      title:"The Police Can Make 1000 Mistakes", 
+      draggable: false,
+      raiseOnDrag: false,
+      icon: image,
+      shadow: shadow,
+      shape: shape
+      //map: map,
+    });
+
+    var MHDB006Infowindow = new google.maps.InfoWindow({
+        content:'<span class="hidden meta">5</span><h4>The Police Can Make 1000 Mistakes</h4><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#" class="highlight-link">Listen to the tape</a>'
+
+    });
+    
+    var MHDB007Marker = new google.maps.Marker({ 
+      position: MHDB007, 
+      map: map, 
+      title:"I Was Thrown Into Confusion", 
+      draggable: false,
+      raiseOnDrag: false,
+      icon: image,
+      shadow: shadow,
+      shape: shape
+      //map: map,
+    });
+
+    var MHDB007Infowindow = new google.maps.InfoWindow({
+        content:'<span class="hidden meta">6</span><h4>I Was Thrown Into Confusion</h4><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#" class="highlight-link">Listen to the tape</a>'
+
+    });
+    
+    var MHDB008Marker = new google.maps.Marker({ 
+      position: MHDB008, 
+      map: map, 
+      title:"Black and White", 
+      draggable: false,
+      raiseOnDrag: false,
+      icon: image,
+      shadow: shadow,
+      shape: shape
+      //map: map,
+    });
+
+    var MHDB008Infowindow = new google.maps.InfoWindow({
+        content:'<span class="hidden meta">7</span><h4>Black and White</h4><p>This snippet of sound was taken from a found audio cassette tape that was recycled into the art object you are probably standing in front of right now.</p><a href="#" class="highlight-link">Listen to the tape</a>'
+
+    });
+
     var lastOpenWindow;
     
     google.maps.event.addListener(MHDB001Marker, 'click', function() {
@@ -430,6 +492,24 @@
       if(lastOpenWindow) lastOpenWindow.close();  
       MHDB005Infowindow.open(map,MHDB005Marker);
       lastOpenWindow = MHDB005Infowindow;
+    });
+    
+    google.maps.event.addListener(MHDB006Marker, 'click', function() {
+      if(lastOpenWindow) lastOpenWindow.close();  
+      MHDB006Infowindow.open(map,MHDB006Marker);
+      lastOpenWindow = MHDB006Infowindow;
+    });
+    
+    google.maps.event.addListener(MHDB007Marker, 'click', function() {
+      if(lastOpenWindow) lastOpenWindow.close();  
+      MHDB007Infowindow.open(map,MHDB007Marker);
+      lastOpenWindow = MHDB007Infowindow;
+    });
+    
+    google.maps.event.addListener(MHDB008Marker, 'click', function() {
+      if(lastOpenWindow) lastOpenWindow.close();  
+      MHDB008Infowindow.open(map,MHDB008Marker);
+      lastOpenWindow = MHDB008Infowindow;
     });
     
   }
