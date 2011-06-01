@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Soundcloud API test</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+</head>
+  <div class="trackEditor">
+  </div>
+<body>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      
+      function getUrlHashVars(){
+          var vars = [], hash;
+          var hashes = window.location.href.slice(window.location.href.indexOf('#') + 1).split('&');
+          for(var i = 0; i < hashes.length; i++)
+          {
+              hash = hashes[i].split('=');
+              vars.push(hash);
+              //vars.push(hash[0]);
+              //vars[hash[0]] = hash[1];
+          }
+          return vars;
+      }  
+      
+      var apiBase = "http://api.soundcloud.com/";
+      var playlistID = 820997;
+      var soundcloudClientID = "4adcff802473b1d7fb764b351e225d4d";
+      var tracks;
+      
+      function getTracksInSet(){
+        url =  apiBase + "playlists/" + playlistID + ".json?client_id=" + soundcloudClientID; 
+        $.ajax({ 
+          'url': url, 
+          'type': "GET", 
+          'dataType': 'json', 
+          'crossDomain' : true, 
+          'success': function(response) {
+            handleTracks(response);
+          }, 
+          'error': function(a, b, c) {
+            console.log("error: "+a+" "+b+" "+c);
+          }
+        });
+      };
+      
+      function handleTracks(response){
+        console.log("handleTracks");
+        tracks = response.tracks;
+        $(".trackEditor").append("<h1>"+tracks.length+" tracks in the set</h1>");
+        for(var i in tracks) {
+          var track = tracks[i];
+          var trackHTML = '<h2>'+track.title+'</h2><form>';
+          trackHTML += '<textarea name="description" rows="5" cols="60">'+track.description+'</textarea>';
+          trackHTML += makeTagFields(track.tag_list);
+          trackHTML += '</form><input type="submit" name="'+track.id+'" value="Submit" />';
+          $(".trackEditor").append(trackHTML);
+        }
+        addSubmitButtonFunction();
+      };
+
+      function makeTagFields(tagList){
+        var tagForms = "";
+        if(tagList == ""){
+          tagList = 'geo:lat= geo:lon=';
+        } else {
+          if(tagList.indexOf("geo:lat=") == -1){
+            tagList = 'geo:lat= geo:lon= '+tagList;
+          }
+        }
+        var tags = tagList.match(/[\w:=.]+|"[^"]+"/g), i = tags.length;
+        while(i--){
+            tags[i] = tags[i].replace(/"/g,"");
+        }
+        for(var i in tags) {
+          tagForms += '<input type="text" value="'+tags[i]+'"></input>';
+        }
+        return tagForms;
+      };
+      
+      function addSubmitButtonFunction(){
+        $('input:submit').live('click', function(event){
+          event.preventDefault();
+          console.log($(this).attr("name"));
+        });
+      }
+      
+      function init(){
+        var urlHashVars = getUrlHashVars();
+        console.log(urlHashVars );
+        console.log(urlHashVars[0] );
+        console.log(urlHashVars[0][0] );
+        if(urlHashVars[0][0] == "access_token"){
+          console.log("authed: ");
+          getTracksInSet();
+        } else {
+          console.log("unauthed");
+          window.location = 'https://soundcloud.com/connect?client_id='+soundcloudClientID+'&response_type=token&redirect_uri=http://musichaekelday.org/soundcloud.html';
+        }
+      }
+      
+      init();
+    });
+  </script>   
+
+
+</body>
+</html>
