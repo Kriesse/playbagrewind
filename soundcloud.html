@@ -25,8 +25,12 @@
       }  
       
       var apiBase = "http://api.soundcloud.com/";
-      var playlistID = 820997;
+      // real playlist
+      // var playlistID = 820997;
+      // test playlist
+      var playlistID = 830270;
       var soundcloudClientID = "4adcff802473b1d7fb764b351e225d4d";
+      var soundcloudAuthToken = "";
       var tracks;
       
       function getTracksInSet(){
@@ -54,7 +58,7 @@
           var trackHTML = '<h2>'+track.title+'</h2><form>';
           trackHTML += '<textarea name="description" rows="5" cols="60">'+track.description+'</textarea>';
           trackHTML += makeTagFields(track.tag_list);
-          trackHTML += '</form><input type="submit" name="'+track.id+'" value="Submit" />';
+          trackHTML += '<input type="submit" name="'+track.id+'" value="Submit" /></form>';
           $(".trackEditor").append(trackHTML);
         }
         addSubmitButtonFunction();
@@ -74,7 +78,7 @@
             tags[i] = tags[i].replace(/"/g,"");
         }
         for(var i in tags) {
-          tagForms += '<input type="text" value="'+tags[i]+'"></input>';
+          tagForms += '<input type="text" name="tag" value="'+tags[i]+'"></input>';
         }
         return tagForms;
       };
@@ -82,7 +86,27 @@
       function addSubmitButtonFunction(){
         $('input:submit').live('click', function(event){
           event.preventDefault();
-          console.log($(this).attr("name"));
+          var trackID = $(this).attr("name");
+          var tagList = "";
+          $(this).parent().children('input[name="tag"]').each(function(){
+            var tag = $(this).val();
+            if(tag.indexOf(" ") != -1) tag = '"'+tag+'"';
+            tagList += tag+' ';
+          });
+            console.log(tagList );
+            url = "https://api.soundcloud.com/tracks/" + trackID + ".json?oauth_token=" + soundcloudAuthToken +"&track[tag_list]="+tagList; 
+          $.ajax({ 
+            'url': url, 
+            'type': "PUT", 
+            'dataType': 'json', 
+            'crossDomain' : true, 
+            'success': function(response) {
+              console.log(response);
+            }, 
+            'error': function(a, b, c) {
+              console.log("error: "+a+" "+b+" "+c);
+            }
+          });
         });
       }
       
@@ -92,7 +116,8 @@
         console.log(urlHashVars[0] );
         console.log(urlHashVars[0][0] );
         if(urlHashVars[0][0] == "access_token"){
-          console.log("authed: ");
+          soundcloudAuthToken = urlHashVars[0][1];
+          console.log("authed: "+soundcloudAuthToken);
           getTracksInSet();
         } else {
           console.log("unauthed");
